@@ -1,0 +1,12 @@
+<template>
+  <require from="./components/password-strength-meter"></require>
+  <div class="App">
+    <h1>React Password Strength Meter</h1>
+    <p>Type in the password input below and watch the password strength meter respond based on the strength of the password you're entering.</p>
+    <br>
+    <div class="meter">
+      <input autoComplete="off" type="password" keydown.delegate="handleChange($event.target.value)">
+      <password-strength-meter password.bind="password"></password-strength-meter>
+    </div>
+  </div>
+</template>
